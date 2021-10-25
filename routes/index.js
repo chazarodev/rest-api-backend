@@ -64,10 +64,15 @@ module.exports = function() {
         productosController.eliminarProducto
     );
 
+    //Búsqueda de productos
+    router.post('/productos/busqueda/:query',
+        productosController.buscarProducto
+    );
+
     /** PEDIDOS */
 
     //Crear nuevo pedido
-    router.post('/pedidos', 
+    router.post('/pedidos/nuevo/:idCliente', 
         pedidosController.nuevoPedido
     );
     
